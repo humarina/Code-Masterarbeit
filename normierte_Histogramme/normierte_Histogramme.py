@@ -11,6 +11,8 @@ def create_histogram(input_folder, output_folder):
     # List of files in the input folder
     file_list = os.listdir(input_folder)
 
+    os.makedirs(output_folder, exist_ok=True)
+
     # Loop through the files
     for file_name in file_list:
         if file_name.endswith('.tif'):

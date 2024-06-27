@@ -56,6 +56,9 @@ for file_name in input_files:
         results.append((file_identifier, mean_g, std_g))
 
 # Write results to a text file in the output folder
+
+os.makedirs(output_folder, exist_ok=True)
+
 output_path = os.path.join(output_folder, 'output.txt')
 with open(output_path, 'w') as output_file:
     output_file.write("File, Mean of g, Standard Deviation of g\n")
